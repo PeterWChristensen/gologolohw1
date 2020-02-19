@@ -21,6 +21,10 @@ export const AppsterCallback = {
     // SOME CALLBACKS ARE SETUP AT THE START BECAUSE THE 
     // CONTROLS ARE DECLARED INSIDE index.html
     APPSTER_PROCESS_CREATE_NEW_WORK: "processCreateNewWork",
+    APPSTER_PROCESS_CANCEL_NEW_WORK: "processCancelNewWork",
+    APPSTER_PROCESS_CONFIRM_NEW_WORK: "processConfirmNewWork",
+    APPSTER_PROCESS_INVALID_NAME_DUP: "processInvalidNameDup",
+    APPSTER_PROCESS_INVALID_NAME_NULL: "processInvalidNameNull",
     APPSTER_PROCESS_EDIT_WORK: "processEditWork",
     APPSTER_PROCESS_GO_HOME: "processGoHome",
     APPSTER_PROCESS_DELETE_WORK: "processDeleteWork",
@@ -31,7 +35,7 @@ export const AppsterCallback = {
 /**
  * AppsterGUIClass - these are the html style classes we'll use for
  * our GUI controls. We'll need these so our style sheets can consistently
- * size, locate, and stylize our user interface controls.
+ * size, locate, and stylize our user interface controls.textField
  */
 export const AppsterGUIClass = {
     // HOME SCREEN CLASSes
@@ -88,12 +92,18 @@ export const AppsterGUIId = {
     APPSTER_YES_NO_MODAL_YES_BUTTON: 'appster_yes_no_modal_yes_button',
     APPSTER_YES_NO_MODAL_NO_BUTTON: 'appster_yes_no_modal_no_button',
     APPSTER_YES_NO_MODAL_FOOTER: 'appster_yes_no_modal_footer',
-    APPSTER_CONFIRM_MODAL: 'appster_confirm_modal',
-    APPSTER_CONFIRM_MODAL_FRAME: 'appster_confirm_modal_frame',
-    APPSTER_CONFIRM_MODAL_HEADER: 'appster_confirm_modal_header',
-    APPSTER_CONFIRM_MODAL_SECTION: 'appster_confirm_modal_section',
-    APPSTER_CONFIRM_MODAL_OK_BUTTON: 'appster_confirm_modal_ok_button',
-    APPSTER_CONFIRM_MODAL_FOOTER: 'appster_confirm_frame',
+    APPSTER_CONFIRM_MODAL_DUP: 'appster_confirm_modal_dup',
+    APPSTER_CONFIRM_MODAL_DUP_FRAME: 'appster_confirm_modal_dup_frame',
+    APPSTER_CONFIRM_MODAL_DUP_HEADER: 'appster_confirm_modal_dup_header',
+    APPSTER_CONFIRM_MODAL_DUP_SECTION: 'appster_confirm_modal_dup_section',
+    APPSTER_CONFIRM_MODAL_DUP_OK_BUTTON: 'appster_confirm_modal_dup_ok_button',
+    APPSTER_CONFIRM_MODAL_DUP_FOOTER: 'appster_confirm_frame_dup',
+    APPSTER_CONFIRM_MODAL_NULL: 'appster_confirm_modal_null',
+    APPSTER_CONFIRM_MODAL_NULL_FRAME: 'appster_confirm_modal_null_frame',
+    APPSTER_CONFIRM_MODAL_NULL_HEADER: 'appster_confirm_modal_null_header',
+    APPSTER_CONFIRM_MODAL_NULL_SECTION: 'appster_confirm_modal_null_section',
+    APPSTER_CONFIRM_MODAL_NULL_OK_BUTTON: 'appster_confirm_modal_null_ok_button',
+    APPSTER_CONFIRM_MODAL_NULL_FOOTER: 'appster_confirm_frame_null',
     APPSTER_TEXT_INPUT_MODAL: 'appster_text_input_modal',
     APPSTER_TEXT_INPUT_MODAL_FRAME: 'appster_text_input_modal_frame',
     APPSTER_TEXT_INPUT_MODAL_HEADER: 'appster_text_input_modal_header',
@@ -158,9 +168,13 @@ export const AppsterText = {
     APPSTER_YES_NO_MODAL_NO_BUTTON_TEXT: "appster_yes_no_modal_no_button_text",
     APPSTER_YES_NO_MODAL_FOOTER_TEXT: "appster_yes_no_modal_footer_text",
 
-    APPSTER_CONFIRM_MODAL_PROMPT_TEXT: "appster_confirm_modal_prompt_text",
-    APPSTER_CONFIRM_MODAL_OK_BUTTON_TEXT: "appster_confirm_modal_ok_button_text",
-    APPSTER_CONFIRM_MODAL_FOOTER_TEXT: "appster_confirm_modal_footer_text",
+    APPSTER_CONFIRM_MODAL_DUP_PROMPT_TEXT: "appster_confirm_modal_dup_prompt_text",
+    APPSTER_CONFIRM_MODAL_DUP_OK_BUTTON_TEXT: "appster_confirm_modal_dup_ok_button_text",
+    APPSTER_CONFIRM_MODAL_DUP_FOOTER_TEXT: "appster_confirm_modal_dup_footer_text",
+
+    APPSTER_CONFIRM_MODAL_NULL_PROMPT_TEXT: "appster_confirm_modal_null_prompt_text",
+    APPSTER_CONFIRM_MODAL_NULL_OK_BUTTON_TEXT: "appster_confirm_modal_null_ok_button_text",
+    APPSTER_CONFIRM_MODAL_NULL_FOOTER_TEXT: "appster_confirm_modal_null_footer_text",
 
     APPSTER_TEXT_INPUT_MODAL_PROMPT_TEXT: "appster_text_input_modal_prompt_text",
     APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON_TEXT: "appster_text_input_modal_enter_button_text",

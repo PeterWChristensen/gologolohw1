@@ -124,7 +124,29 @@ export default class AppsterModel {
         this.view.loadListData(this.listToEdit);
     }
 
-    goList() {
-        
+    checkNameExists(logoName) {
+        var exists = false;
+        for(var i = 0; i < this.recentWork.length; i++) {
+            if (this.recentWork[i].name === logoName) {
+                return true;
+            }
+        }
+        return false;
+    }
+    verifyName(logoName) {
+        console.log(logoName);
+        if (this.checkNameExists(logoName)) {
+            return 2;
+        }
+        else if (logoName === "") {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    goList(logoName) {
+
     }
 }

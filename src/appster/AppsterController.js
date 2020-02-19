@@ -1,4 +1,4 @@
-import {AppsterCallback, AppsterGUIId, AppsterHTML} from './AppsterConstants.js'
+import {AppsterCallback, AppsterGUIId, AppsterHTML, AppsterGUIClass} from './AppsterConstants.js'
 
 export default class AppsterController {
     constructor() {
@@ -30,6 +30,13 @@ export default class AppsterController {
     registerAppsterEventHandlers() {
         // FIRST THE NEW WORK BUTTON ON THE HOME SCREEN
         this.registerEventHandler(AppsterGUIId.APPSTER_HOME_NEW_WORK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CREATE_NEW_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_NEW_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CONFIRM_NEW_WORK]);
+        
+        // ERROR NAME MODAL
+        this.registerEventHandler(AppsterGUIId.APPSTER_CONFIRM_MODAL_DUP_OK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_INVALID_NAME_DUP]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_CONFIRM_MODAL_NULL_OK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_INVALID_NAME_NULL]);
+
 
         // THEN THE CONTROLS ON THE EDIT SCREEN
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_HOME_LINK, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_GO_HOME]);
@@ -93,6 +100,40 @@ export default class AppsterController {
         this.model.view.showInputModal();
         // MAKE A BRAND NEW LIST
         this.model.goList();
+    }
+
+    processCancelNewWork = () => {
+        console.log("processCancelNewWork");
+
+        this.model.view.hideInputModal();
+    }
+
+    processConfirmNewWork = () => {
+        console.log("processConfirmNewWork");
+
+        let value = this.model.verifyName(document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value);
+        if(value === 2) {
+            this.model.view.showConfirmModalDup();
+        }
+        else if (value === 1) {
+            console.log("here");
+            this.model.view.showConfirmModalNull();
+        }
+        else {
+            this.model.goList(document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value);
+        }
+    }
+
+    processInvalidNameDup = () => {
+        console.log("processInvalidNameDup");
+
+        this.model.view.hideConfirmModalDup();
+    }
+
+    processInvalidNameNull = () => {
+        console.log("processInvalidNameNull");
+
+        this.model.view.hideConfirmModalNull();
     }
 
     /**
