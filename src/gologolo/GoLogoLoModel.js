@@ -48,5 +48,8 @@ export default class GoLogoLoModel extends AppsterModel {
  //       this.view.
     }
 
-    
+    goList(logoName) {
+        this.prependWork(new GoLogoLoLogo(logoName));
+    }
+
 }
