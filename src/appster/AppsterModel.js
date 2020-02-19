@@ -1,3 +1,5 @@
+import AppWork from './AppWork.js'
+
 export default class AppsterModel {
     constructor() {
         // THE RECENT WORK LIST
@@ -124,21 +126,20 @@ export default class AppsterModel {
         this.view.loadListData(this.listToEdit);
     }
 
-    checkNameExists(logoName) {
+    checkNameExists(workName) {
         var exists = false;
         for(var i = 0; i < this.recentWork.length; i++) {
-            if (this.recentWork[i].name === logoName) {
+            if (this.recentWork[i].name === workName) {
                 return true;
             }
         }
         return false;
     }
-    verifyName(logoName) {
-        console.log(logoName);
-        if (this.checkNameExists(logoName)) {
+    verifyName(workName) {
+        if (this.checkNameExists(workName)) {
             return 2;
         }
-        else if (logoName === "") {
+        else if (workName === "") {
             return 1;
         }
         else {
@@ -146,7 +147,7 @@ export default class AppsterModel {
         }
     }
 
-    goList(logoName) {
-
+    goList(newWork) {
+        this.prependWork(new AppWork(newWork));
     }
 }

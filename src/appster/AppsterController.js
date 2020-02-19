@@ -99,7 +99,6 @@ export default class AppsterController {
         // PROMPT FOR THE NAME OF THE NEW LIST
         this.model.view.showInputModal();
         // MAKE A BRAND NEW LIST
-        this.model.goList();
     }
 
     processCancelNewWork = () => {
