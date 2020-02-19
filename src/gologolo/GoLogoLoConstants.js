@@ -40,3 +40,7 @@ export const GoLogoLoText = {
     GOLOGOLO_PADDING_TEXT: "gologolo_padding_text",
     GOLOGOLO_MARGIN_TEXT: "gologolo_margin_text"
 }
+
+export const GoLogoLoCallback = {
+    GOLOGOLO_PROCESS_EDIT_TEXT: "processEditText"
+}
