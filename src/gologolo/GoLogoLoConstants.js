@@ -26,7 +26,15 @@ export const GoLogoLoGUIId = {
     GOLOGOLO_BORDER_THICKNESS_SLIDER: "gologolo_border_thickness_slider",
     GOLOGOLO_PADDING_SLIDER: "gologolo_padding_slider",
     GOLOGOLO_MARGIN_SLIDER: "gologolo_margin_slider",
-    GOLOGOLO_TEXT: "gologolo_text"
+    GOLOGOLO_TEXT: "gologolo_text",
+    GOLOGOLO_TEXT_INPUT_MODAL: 'gologolo_text_input_modal',
+    GOLOGOLO_TEXT_INPUT_MODAL_FRAME: 'gologolo_text_input_modal_frame',
+    GOLOGOLO_TEXT_INPUT_MODAL_HEADER: 'gologolo_text_input_modal_header',
+    GOLOGOLO_TEXT_INPUT_MODAL_SECTION: 'gologolo_text_input_modal_section',
+    GOLOGOLO_TEXT_INPUT_MODAL_TEXTFIELD: "gologolo_text_input_modal_textfield",
+    GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON: 'gologolo_text_input_modal_enter_button',
+    GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON: 'gologolo_text_input_modal_cancel_button',
+    GOLOGOLO_TEXT_INPUT_MODAL_FOOTER: 'gologolo_text_input_modal_footer'
 };
 
 export const GoLogoLoText = {
@@ -38,9 +46,16 @@ export const GoLogoLoText = {
     GOLOGOLO_BORDER_RADIUS_TEXT: "gologolo_border_radius_text",
     GOLOGOLO_BORDER_THICKNESS_TEXT: "gologolo_border_thickness_text",
     GOLOGOLO_PADDING_TEXT: "gologolo_padding_text",
-    GOLOGOLO_MARGIN_TEXT: "gologolo_margin_text"
+    GOLOGOLO_MARGIN_TEXT: "gologolo_margin_text",
+
+    GOLOGOLO_TEXT_INPUT_MODAL_PROMPT_TEXT: "gologolo_text_input_modal_prompt_text",
+    GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON_TEXT: "appster_text_input_modal_enter_button_text",
+    GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON_TEXT: "appster_text_input_modal_cancel_button_text",
+    GOLOGOLO_TEXT_INPUT_MODAL_FOOTER_TEXT: "gologolo_text_input_modal_footer_text",
 }
 
 export const GoLogoLoCallback = {
-    GOLOGOLO_PROCESS_EDIT_TEXT: "processEditText"
+    GOLOGOLO_PROCESS_EDIT_TEXT: "processEditText",
+    GOLOGOLO_PROCESS_CANCEL_NEW_TEXT: "processCancelNewText",
+    GOLOGOLO_PROCESS_CONFIRM_NEW_TEXT: "processConfirmNewText"
 }
