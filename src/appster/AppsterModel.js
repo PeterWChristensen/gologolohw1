@@ -129,7 +129,8 @@ export default class AppsterModel {
 
     checkNameExists(workName) {
         var exists = false;
-        workName.replace(/\s+$/g, '');
+        workName = workName.trim();
+        console.log(workName + "I");
         for(var i = 0; i < this.recentWork.length; i++) {
             if (this.recentWork[i].name === workName) {
                 return true;
