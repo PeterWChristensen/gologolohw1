@@ -43,9 +43,9 @@ export default class GoLogoLoView extends AppsterView {
         toolbar.appendChild(this.buildElement(AppsterHTML.FORM));
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTONS_TEXT));
         toolbar.appendChild(borderStyleRadioButtonNone); 
-        borderStyleRadioButtonNone.setAttribute("checked", "true");
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE_LABEL, [], [], GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE_TEXT));
         toolbar.appendChild(borderStyleRadioButtonSolid); 
+        borderStyleRadioButtonSolid.setAttribute("checked", "true");
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID_LABEL, [], [], GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID_TEXT));
         toolbar.appendChild(this.buildElement(AppsterHTML.BR));
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_COLOR_TEXT));
@@ -54,10 +54,10 @@ export default class GoLogoLoView extends AppsterView {
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_RADIUS_TEXT));
         toolbar.appendChild(borderRadiusSlider);
         toolbar.appendChild(this.buildElement(AppsterHTML.BR));
-        let borderThicknessText = this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER_TEXT, promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_THICKNESS_TEXT);
-        borderThicknessText.style.opacity = 0.4;
-        borderThicknessSlider.disabled = true;
-        toolbar.appendChild(borderThicknessText);
+        //let borderThicknessText = this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER_TEXT, promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_THICKNESS_TEXT);
+        //borderThicknessText.style.opacity = 0.4;
+        //borderThicknessSlider.disabled = true;
+        toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER_TEXT, promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_THICKNESS_TEXT));
         toolbar.appendChild(borderThicknessSlider);
         toolbar.appendChild(this.buildElement(AppsterHTML.BR));
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_PADDING_TEXT));
