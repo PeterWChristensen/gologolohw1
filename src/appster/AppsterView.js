@@ -89,6 +89,7 @@ export default class AppsterView {
             let appsterEditTextModal = this.buildAppsterEditTextModal();
             appsterRootDiv.appendChild(appsterHomeScreenDiv);
             appsterRootDiv.appendChild(appsterEditScreenDiv);
+            document.getElementById(AppsterGUIId.APPSTER_EDIT_WORKSPACE).style.overflow = "auto";
             appsterRootDiv.appendChild(appsterYesNoModal);
             appsterRootDiv.appendChild(appsterTextInputModal);
             appsterRootDiv.appendChild(appsterConfirmModalDup);
