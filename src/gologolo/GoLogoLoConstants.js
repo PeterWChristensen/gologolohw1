@@ -31,6 +31,7 @@ export const GoLogoLoGUIId = {
     GOLOGOLO_BORDER_COLOR_PICKER: "gologolo_border_color_picker",
     GOLOGOLO_BORDER_RADIUS_SLIDER: "gologolo_border_radius_slider",
     GOLOGOLO_BORDER_THICKNESS_SLIDER: "gologolo_border_thickness_slider",
+    GOLOGOLO_BORDER_THICKNESS_SLIDER_TEXT: "gologolo_border_thickness_slider_text",
     GOLOGOLO_PADDING_SLIDER: "gologolo_padding_slider",
     GOLOGOLO_MARGIN_SLIDER: "gologolo_margin_slider",
     GOLOGOLO_TEXT: "gologolo_text",

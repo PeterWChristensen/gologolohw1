@@ -43,6 +43,7 @@ export default class GoLogoLoView extends AppsterView {
         toolbar.appendChild(this.buildElement(AppsterHTML.FORM));
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTONS_TEXT));
         toolbar.appendChild(borderStyleRadioButtonNone); 
+        borderStyleRadioButtonNone.setAttribute("checked", "true");
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE_LABEL, [], [], GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE_TEXT));
         toolbar.appendChild(borderStyleRadioButtonSolid); 
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID_LABEL, [], [], GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID_TEXT));
@@ -53,7 +54,10 @@ export default class GoLogoLoView extends AppsterView {
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_RADIUS_TEXT));
         toolbar.appendChild(borderRadiusSlider);
         toolbar.appendChild(this.buildElement(AppsterHTML.BR));
-        toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_THICKNESS_TEXT));
+        let borderThicknessText = this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER_TEXT, promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_THICKNESS_TEXT);
+        borderThicknessText.style.opacity = 0.4;
+        borderThicknessSlider.disabled = true;
+        toolbar.appendChild(borderThicknessText);
         toolbar.appendChild(borderThicknessSlider);
         toolbar.appendChild(this.buildElement(AppsterHTML.BR));
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_PADDING_TEXT));
@@ -76,10 +80,6 @@ export default class GoLogoLoView extends AppsterView {
         textColorPicker.value = work.getTextColor();
         let backgroundColorPicker = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER);
         backgroundColorPicker.value = work.getBackgroundColor();
-        //let borderStyleRadioButtonNone = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE);
-        //let borderStlyeRadioButtonSolid = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID);
-        //borderStyleRadioButtonNone.value = work.getBorderStyle();
-
         let borderColorPicker = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER);
         borderColorPicker.value = work.getBorderColor();
         let borderRadiusSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER);
@@ -104,6 +104,22 @@ export default class GoLogoLoView extends AppsterView {
         textDiv.style.borderWidth = work.getBorderThickness() + "px";
         textDiv.style.padding = work.getPadding() + "px";
         textDiv.style.margin = work.getMargin() + "px";
+    }
+
+    disableBorderStyleOptions() {
+        let thicknessSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER);
+        thicknessSlider.disabled = true;
+        let thicknessSliderText = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER_TEXT);
+        thicknessSliderText.style.opacity = 0.4;
+        console.log("disableBorderStyleOptions");
+    }
+
+    enableBorderStyleOptions() {
+        let thicknessSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER);
+        thicknessSlider.disabled = false;
+        let thicknessSliderText = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER_TEXT);
+        thicknessSliderText.style.opacity = 1;
+        console.log("enableBorderStyleOptions");
     }
 
     buildAppsterEditTextModal() {

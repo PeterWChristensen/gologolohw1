@@ -43,11 +43,13 @@ export default class GoLogoLoController
     processBorderNone = () => {
         console.log("processBorderNone");
         this.model.updateBorderStyle(document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE).value);
+        this.model.view.disableBorderStyleOptions();
     }
 
     processBorderSolid = () => {
         console.log("processBorderSolid");
         this.model.updateBorderStyle(document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID).value);
+        this.model.view.enableBorderStyleOptions();
     }
 
     processBorderColor = () => {
