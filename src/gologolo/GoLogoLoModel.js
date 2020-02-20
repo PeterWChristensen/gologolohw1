@@ -64,6 +64,11 @@ export default class GoLogoLoModel extends AppsterModel {
         this.view.loadWork(this.currentWork);
     }
 
+    updateBorderStyle(style) {
+        this.currentWork.setBorderStyle(style);
+        this.view.loadWork(this.currentWork);
+    }
+
     updateBorderColor(color) {
         this.currentWork.setBorderColor(color);
         this.view.loadWork(this.currentWork);

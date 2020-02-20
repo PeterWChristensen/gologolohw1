@@ -37,8 +37,17 @@ export default class GoLogoLoController
 
     processBackgroundColor = () => {
         console.log("processBackgroundColor");
-        console.log(document.getElementById(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER).value);
         this.model.updateBackgroundColor(document.getElementById(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER).value);
+    }
+
+    processBorderNone = () => {
+        console.log("processBorderNone");
+        this.model.updateBorderStyle(document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE).value);
+    }
+
+    processBorderSolid = () => {
+        console.log("processBorderSolid");
+        this.model.updateBorderStyle(document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID).value);
     }
 
     processBorderColor = () => {
@@ -74,8 +83,10 @@ export default class GoLogoLoController
         // Handlers for logo manipulation
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_FONT_SLIDER]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_TEXT_COLOR]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_COLOR]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BACKGROUND_COLOR]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE, AppsterHTML.CLICK, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_NONE]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID, AppsterHTML.CLICK, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_SOLID]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_COLOR]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_RADIUS]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_THICKNESS]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_PADDING]);

@@ -127,15 +127,20 @@ export const AppsterHTML = {
     COLOR: "color",
     DATA_ANIMATION: "data-animation",
     DIV: "div",
+    FIELDSET: "fieldset",
+    FORM: "form",
     HEADER: "header",
     H1: "h1", H2: "h2", H3: "h3", H4: "h4", H5: "h5", H6: "h6",  
     HIDDEN: "hidden",
     ID: "id",
     INPUT: "input",
     KEYUP: "keyup",
+    LABEL: "label",
     LI: "li",
+    NAME: "name",
     ONCLICK: "onclick",
     P: "p",
+    RADIO: "radio",
     RANGE: "range",
     SECTION: "section",
     SELECTION: "selection",
@@ -143,7 +148,8 @@ export const AppsterHTML = {
     STRONG: "strong",
     TEXT: "text",
     TYPE: "type",
-    UL: "ul"
+    UL: "ul",
+    VALUE: "value"
 };
 
 /**

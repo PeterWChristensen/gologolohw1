@@ -130,6 +130,22 @@ export default class AppsterView {
         return element;
     }
 
+    buildRadioButton(idValue, groupName, textId) {
+        let element = document.createElement(AppsterHTML.INPUT);
+        element.setAttribute("type", "radio");
+        if (idValue) {
+            element.setAttribute(AppsterHTML.ID, idValue);
+        }
+        if (groupName){
+            element.setAttribute(AppsterHTML.NAME, groupName);
+        }
+        if (textId) {
+            let text = this.appText[textId];
+            element.setAttribute(AppsterHTML.VALUE, text);
+        }
+        return element;
+    }
+
     buildAppsterHomeScreenDiv() {
         // BUILD THE THREE THINGS THIS SCREEN HAS
         let recentWorkDiv = this.buildAppsterRecentWorkDiv();
