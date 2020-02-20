@@ -1,5 +1,5 @@
 import {GoLogoLoGUIClass, GoLogoLoGUIId, GoLogoLoText} from './GoLogoLoConstants.js'
-import {AppsterHTML, AppsterSymbols, AppsterText, AppsterGUIClass} from '../appster/AppsterConstants.js'
+import {AppsterHTML, AppsterSymbols, AppsterText, AppsterGUIClass, AppsterGUIId} from '../appster/AppsterConstants.js'
 import AppsterView from '../appster/AppsterView.js'
 
 export default class GoLogoLoView extends AppsterView {
@@ -155,6 +155,16 @@ export default class GoLogoLoView extends AppsterView {
     appendLetter(listItemId, letterToAppend) {
         let textList = document.getElementById(listItemId);
         textList.innerHTML += textList.innerHTML + letterToAppend;
+    }
+
+    updateTextDiv() {
+        /*let div = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        let content = div.innerHTML;
+        div.innerHTML = content;
+        */
+        //this.showElementWithId(AppsterGUIId.APPSTER_EDIT_SCREEN, false);
+        //this.showElementWithId(AppsterGUIId.APPSTER_EDIT_SCREEN, true);
+        console.log("updateTextDiv");
     }
 
     showEditTextModal() {

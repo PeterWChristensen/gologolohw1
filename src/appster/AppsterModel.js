@@ -149,6 +149,6 @@ export default class AppsterModel {
     }
 
     goList(newWork) {
-        //this.prependWork(new AppWork(newWork));
+        
     }
 }

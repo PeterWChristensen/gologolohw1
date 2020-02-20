@@ -9,16 +9,19 @@ export default class GoLogoLoController
     }
 
     processEditText = () => {
+        console.log("processEditText");
         this.model.view.showEditTextModal();
-        //this.model.updateText();
     }
 
     processCancelNewText = () => {
+        console.log("processCancelNewText");
         this.model.view.hideEditTextModal();
     }
 
     processConfirmNewText = () => { 
-        //
+        console.log("processConfirmNewText");
+        this.model.updateText(document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL_TEXTFIELD).value);
+        this.model.view.hideEditTextModal();
     }
 
     registerAppEventHandlers() {

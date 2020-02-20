@@ -127,8 +127,8 @@ export default class AppsterController {
         }
         else {
             this.model.goList(document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value);
+            this.model.editWork(document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value);
             this.model.view.hideInputModal();
-            this.model.editWork(document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value)
         }
     }
 

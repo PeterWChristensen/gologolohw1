@@ -201,6 +201,11 @@ export default class AppsterView {
         return editScreenDiv;
     }
 
+    reloadEditWorkSpace() {
+        document.getElementById(AppsterGUIId.APPSTER_ROOT_DIV).removeChild(document.getElementById(AppsterGUIId.APPSTER_EDIT_WORKSPACE));
+        this.loadRoot();        
+    }
+
     buildAppsterYesNoModal() {
         let yesNoModal = this.buildElement( AppsterHTML.DIV, 
                                             AppsterGUIId.APPSTER_YES_NO_MODAL,
@@ -582,6 +587,8 @@ export default class AppsterView {
 
    hideInputModal() {
        let input = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
+       let inputText = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD);
+       inputText.value = " ";
        input.classList.remove(AppsterGUIClass.IS_VISIBLE);
    }
 

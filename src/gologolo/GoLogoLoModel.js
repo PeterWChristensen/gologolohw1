@@ -44,8 +44,10 @@ export default class GoLogoLoModel extends AppsterModel {
         return appWork;
     }
 
-    updateText() {
-        this.view.setText
+    updateText(newText) {
+        this.currentWork.setText(newText);
+        this.view.loadWork(this.currentWork);
+        console.log(this.currentWork.text);
     }
 
     goList(logoName) {
