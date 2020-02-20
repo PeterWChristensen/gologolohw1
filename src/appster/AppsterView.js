@@ -268,6 +268,7 @@ export default class AppsterView {
         section.appendChild(noButton);
         yesNoFrame.appendChild(footer);
         yesNoModal.appendChild(yesNoFrame);
+        yesNoFrame.style.overflow = "hidden";
         return yesNoModal;
     }
 
@@ -276,8 +277,7 @@ export default class AppsterView {
                                             AppsterGUIId.APPSTER_TEXT_INPUT_MODAL,
                                             [AppsterGUIClass.APPSTER_MODAL],
                                             [],
-                                            null,
-                                            AppsterGUIClass.MODAL_ANIMATION_LEFT);
+                                            null);
         let textFrame = this.buildElement( AppsterHTML.DIV, 
                                             AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_FRAME,
                                             [AppsterGUIClass.APPSTER_MODAL_FRAME]);
@@ -323,6 +323,7 @@ export default class AppsterView {
         section.appendChild(cancelButton);
         textFrame.appendChild(footer);
         textModal.appendChild(textFrame);
+        textFrame.style.overflow = "hidden";
         return textModal;
     }
 
@@ -369,6 +370,7 @@ export default class AppsterView {
         section.appendChild(okButton);
         confirmFrame.appendChild(footer);
         confirmModal.appendChild(confirmFrame);
+        confirmFrame.style.overflow = "hidden";
         return confirmModal;
     }
 
@@ -411,6 +413,7 @@ export default class AppsterView {
         section.appendChild(okButton);
         confirmFrame.appendChild(footer);
         confirmModal.appendChild(confirmFrame);
+        confirmFrame.style.overflow = "hidden";
         return confirmModal;
     }
 

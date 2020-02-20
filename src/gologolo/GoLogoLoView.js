@@ -184,6 +184,7 @@ export default class GoLogoLoView extends AppsterView {
         section.appendChild(cancelButton);
         textFrame.appendChild(footer);
         textModal.appendChild(textFrame);
+        textFrame.style.overflow = "hidden";
         return textModal;
     }
 
