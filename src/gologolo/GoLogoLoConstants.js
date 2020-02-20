@@ -59,5 +59,11 @@ export const GoLogoLoCallback = {
     GOLOGOLO_PROCESS_CANCEL_NEW_TEXT: "processCancelNewText",
     GOLOGOLO_PROCESS_CONFIRM_NEW_TEXT: "processConfirmNewText",
     GOLOGOLO_PROCESS_FONT_SLIDER: "processFontSlider",
-    GOLOGOLO_PROCESS_TEXT_COLOR: "processTextColor"
+    GOLOGOLO_PROCESS_TEXT_COLOR: "processTextColor",
+    GOLOGOLO_PROCESS_BACKGROUND_COLOR: "processBackgroundColor",
+    GOLOGOLO_PROCESS_BORDER_COLOR: "processBorderColor",
+    GOLOGOLO_PROCESS_BORDER_RADIUS: "processBorderRadius",
+    GOLOGOLO_PROCESS_BORDER_THICKNESS: "processBorderThickness",
+    GOLOGOLO_PROCESS_PADDING: "processPadding",
+    GOLOGOLO_PROCESS_MARGIN: "processMargin"
 }

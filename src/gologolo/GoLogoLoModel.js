@@ -59,6 +59,36 @@ export default class GoLogoLoModel extends AppsterModel {
         this.view.loadWork(this.currentWork);
     }
 
+    updateBackgroundColor(color) {
+        this.currentWork.setBackgroundColor(color);
+        this.view.loadWork(this.currentWork);
+    }
+
+    updateBorderColor(color) {
+        this.currentWork.setBorderColor(color);
+        this.view.loadWork(this.currentWork);
+    }
+
+    updateBorderRadius(radius) {
+        this.currentWork.setBorderRadius(radius);
+        this.view.loadWork(this.currentWork);
+    }
+
+    updateBorderThickness(thickness) {
+        this.currentWork.setBorderThickness(thickness);
+        this.view.loadWork(this.currentWork);
+    }
+
+    updatePadding(padding) {
+        this.currentWork.setPadding(padding);
+        this.view.loadWork(this.currentWork);
+    }
+
+    updateMargin(margin) {
+        this.currentWork.setMargin(margin);
+        this.view.loadWork(this.currentWork);
+    }
+
     goList(logoName) {
         this.prependWork(new GoLogoLoLogo(logoName));
     }

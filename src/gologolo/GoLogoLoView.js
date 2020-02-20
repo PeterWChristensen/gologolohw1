@@ -87,8 +87,8 @@ export default class GoLogoLoView extends AppsterView {
         textDiv.style.borderColor = work.getBorderColor();
         textDiv.style.borderRadius = work.getBorderRadius();
         textDiv.style.borderThickness = work.getBorderThickness();
-        //textDive.style.padding = work.getPadding() + "px";
-        //textDiv.style.margin = work.getMargin() + "px";
+        textDiv.style.padding = work.getPadding() + "px";
+        textDiv.style.margin = work.getMargin() + "px";
     }
 
     buildAppsterEditTextModal() {
