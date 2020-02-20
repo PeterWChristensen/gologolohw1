@@ -26,6 +26,7 @@ export default class GoLogoLoController
 
     processFontSlider = () => {
         console.log("processFontSlider");
+        console.log(document.getElementById(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER).value);
         this.model.updateFontSize(document.getElementById(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER).value);
     }
 

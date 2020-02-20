@@ -52,7 +52,6 @@ export default class GoLogoLoModel extends AppsterModel {
     updateFontSize(size) {
         this.currentWork.setFontSize(size);
         this.view.loadWork(this.currentWork);
-        console.log(this.currentWork.getFontSize());
     }
 
     updateTextColor(color) {
