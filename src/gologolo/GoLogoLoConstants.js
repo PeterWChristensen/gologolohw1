@@ -57,5 +57,7 @@ export const GoLogoLoText = {
 export const GoLogoLoCallback = {
     GOLOGOLO_PROCESS_EDIT_TEXT: "processEditText",
     GOLOGOLO_PROCESS_CANCEL_NEW_TEXT: "processCancelNewText",
-    GOLOGOLO_PROCESS_CONFIRM_NEW_TEXT: "processConfirmNewText"
+    GOLOGOLO_PROCESS_CONFIRM_NEW_TEXT: "processConfirmNewText",
+    GOLOGOLO_PROCESS_FONT_SLIDER: "processFontSlider",
+    GOLOGOLO_PROCESS_TEXT_COLOR: "processTextColor"
 }

@@ -157,16 +157,6 @@ export default class GoLogoLoView extends AppsterView {
         textList.innerHTML += textList.innerHTML + letterToAppend;
     }
 
-    updateTextDiv() {
-        /*let div = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
-        let content = div.innerHTML;
-        div.innerHTML = content;
-        */
-        //this.showElementWithId(AppsterGUIId.APPSTER_EDIT_SCREEN, false);
-        //this.showElementWithId(AppsterGUIId.APPSTER_EDIT_SCREEN, true);
-        console.log("updateTextDiv");
-    }
-
     showEditTextModal() {
         let text = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL);
         text.classList.add(AppsterGUIClass.IS_VISIBLE);
