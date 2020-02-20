@@ -15,6 +15,7 @@ export default class GoLogoLoView extends AppsterView {
 
         // FIRST MAKE THE TOOLBAR
         let toolbar = this.buildElement(AppsterHTML.DIV, GoLogoLoGUIId.GOLOGOLO_TOOLBAR);
+        let logoName = this.buildElement(AppsterHTML.P, GoLogoLoGUIId.GOLOGOLO_EDITING_LOGO_NAME);
         let editTextButton = this.buildElement(AppsterHTML.BUTTON, GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_BUTTON, [], [], GoLogoLoText.GOLOGOLO_EDIT_TEXT_TEXT);
         let fontSizeSlider = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER, [], rangeAttributes);
         let textColorPicker = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER, [], colorPickerAttributes);
@@ -28,6 +29,7 @@ export default class GoLogoLoView extends AppsterView {
         let marginSlider = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER, [], rangeAttributes);
         let textDiv = this.buildElement(AppsterHTML.DIV, GoLogoLoGUIId.GOLOGOLO_TEXT);
         let promptClass = [GoLogoLoGUIClass.GOLOGOLO_CONTROL_PROMPT];
+        toolbar.appendChild(logoName);
         toolbar.appendChild(editTextButton);
         toolbar.appendChild(this.buildElement(AppsterHTML.BR));
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_FONT_SIZE_TEXT));
@@ -68,10 +70,13 @@ export default class GoLogoLoView extends AppsterView {
 
         workspace.appendChild(toolbar);
         workspace.appendChild(textDiv);
+        workspace.style.padding = 0;
         return workspace;
     }
 
     loadWork(work) {
+        let logoName = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDITING_LOGO_NAME);
+        logoName.innerHTML = work.getName();
         let textDiv = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
         textDiv.innerHTML = work.getText();
         let fontSizeSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER);
@@ -94,7 +99,12 @@ export default class GoLogoLoView extends AppsterView {
     }
 
     loadWorkStyle(work) {
+        let logoName = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDITING_LOGO_NAME);
+        logoName.style.textAlign = "center";
+        logoName.style.fontSize = "20px";
+        logoName.style.fontWeight = "900";
         let textDiv = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        textDiv.style.textAlign = "center";
         textDiv.style.fontSize = work.getFontSize() + "px";
         textDiv.style.color = work.getTextColor();
         textDiv.style.backgroundColor = work.getBackgroundColor();

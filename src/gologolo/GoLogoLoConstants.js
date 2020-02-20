@@ -18,6 +18,7 @@ export const GoLogoLoGUIClass = {
 
 export const GoLogoLoGUIId = {
     GOLOGOLO_TOOLBAR: "gologolo_toolbar",
+    GOLOGOLO_EDITING_LOGO_NAME: "gologolo_editing_logo_name",
     GOLOGOLO_EDIT_TEXT_BUTTON: "gologolo_edit_text_button",
     GOLOGOLO_FONT_SIZE_SLIDER: "gologolo_font_size_slider",
     GOLOGOLO_TEXT_COLOR_PICKER: "gologolo_text_color_picker",

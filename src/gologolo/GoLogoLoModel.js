@@ -45,6 +45,9 @@ export default class GoLogoLoModel extends AppsterModel {
     }
 
     updateText(newText) {
+        if (newText === "") {
+            newText = " ";
+        }
         this.currentWork.setText(newText);
         this.view.loadWork(this.currentWork);
     }
