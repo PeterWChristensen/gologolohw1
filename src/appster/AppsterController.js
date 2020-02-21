@@ -116,18 +116,25 @@ export default class AppsterController {
 
     processConfirmNewWork = () => {
         console.log("processConfirmNewWork");
-
-        let value = this.model.verifyName(document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value);
+        let nameWithSpaces = "";
+        let name = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
+        name = name.trim();
+            for (var i = 0; i < name.length; i++) {
+                if (name[i] == " ") 
+                nameWithSpaces += "&nbsp";
+                else
+                nameWithSpaces += name[i];
+            }
+        let value = this.model.verifyName(nameWithSpaces);
         if(value === 2) {
             this.model.view.showConfirmModalDup();
         }
         else if (value === 1) {
-            console.log("here");
             this.model.view.showConfirmModalNull();
         }
         else {
-            this.model.goList(document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value);
-            this.model.editWork(document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value);
+            this.model.goList(nameWithSpaces);
+            this.model.editWork(nameWithSpaces);
             this.model.view.hideInputModal();
         }
     }

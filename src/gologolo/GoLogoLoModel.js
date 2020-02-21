@@ -98,6 +98,7 @@ export default class GoLogoLoModel extends AppsterModel {
     }
 
     goList(logoName) {
+        console.log(logoName);
         this.prependWork(new GoLogoLoLogo(logoName));
     }
 
