@@ -52,6 +52,12 @@ export default class GoLogoLoController
         this.model.view.enableBorderStyleOptions();
     }
 
+    processBorderDashed = () => {
+        console.log("processBorderDashed");
+        this.model.updateBorderStyle(document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_DASHED).value);
+        this.model.view.enableBorderStyleOptions();
+    }
+
     processBorderColor = () => {
         console.log("processBorderColor");
         this.model.updateBorderColor(document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER).value);
@@ -88,6 +94,7 @@ export default class GoLogoLoController
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BACKGROUND_COLOR]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE, AppsterHTML.CLICK, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_NONE]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID, AppsterHTML.CLICK, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_SOLID]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_DASHED, AppsterHTML.CLICK, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_DASHED]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_COLOR]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_RADIUS]);
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallback.GOLOGOLO_PROCESS_BORDER_THICKNESS]);

@@ -22,6 +22,7 @@ export default class GoLogoLoView extends AppsterView {
         let backgroundColorPicker = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER, [], colorPickerAttributes);
         let borderStyleRadioButtonNone = this.buildRadioButton(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE, GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_GROUP, GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_NONE_TEXT);
         let borderStyleRadioButtonSolid = this.buildRadioButton(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID, GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_GROUP, GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID_TEXT);
+        let borderStyleRadioButtonDashed = this.buildRadioButton(GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_DASHED, GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_GROUP, GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_DASHED_TEXT);
         let borderColorPicker = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER, [], colorPickerAttributes);
         let borderRadiusSlider = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER, [], rangeAttributes);
         let borderThicknessSlider = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER, [], rangeAttributes);
@@ -49,6 +50,8 @@ export default class GoLogoLoView extends AppsterView {
         toolbar.appendChild(borderStyleRadioButtonSolid); 
         borderStyleRadioButtonSolid.setAttribute("checked", "true");
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID_LABEL, [], [], GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_SOLID_TEXT));
+        toolbar.appendChild(borderStyleRadioButtonDashed); 
+        toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, GoLogoLoGUIId.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_DASHED_LABEL, [], [], GoLogoLoText.GOLOGOLO_BORDER_STYLE_RADIO_BUTTON_DASHED_TEXT));
         toolbar.appendChild(this.buildElement(AppsterHTML.BR));
         toolbar.appendChild(this.buildElement(AppsterHTML.SPAN, "", promptClass, [], GoLogoLoText.GOLOGOLO_BORDER_COLOR_TEXT));
         toolbar.appendChild(borderColorPicker);
