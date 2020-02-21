@@ -48,7 +48,14 @@ export default class GoLogoLoModel extends AppsterModel {
         if (newText === "") {
             newText = " ";
         }
-        this.currentWork.setText(newText);
+        let textWithSpaces = "";
+        for (var i = 0; i < newText.length; i++) {
+            if (newText[i] == " ") 
+                textWithSpaces += "&nbsp";
+            else
+                textWithSpaces += newText[i];
+        }
+        this.currentWork.setText(textWithSpaces);
         this.view.loadWork(this.currentWork);
     }
 

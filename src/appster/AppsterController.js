@@ -119,12 +119,12 @@ export default class AppsterController {
         let nameWithSpaces = "";
         let name = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
         name = name.trim();
-            for (var i = 0; i < name.length; i++) {
-                if (name[i] == " ") 
+        for (var i = 0; i < name.length; i++) {
+            if (name[i] == " ") 
                 nameWithSpaces += "&nbsp";
-                else
+            else
                 nameWithSpaces += name[i];
-            }
+        }
         let value = this.model.verifyName(nameWithSpaces);
         if(value === 2) {
             this.model.view.showConfirmModalDup();
