@@ -10,6 +10,7 @@ export default class GoLogoLoController
 
     processEditText = () => {
         console.log("processEditText");
+        document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT_INPUT_MODAL_TEXTFIELD).value = this.model.currentWork.getText();
         this.model.view.showEditTextModal();
     }
 
